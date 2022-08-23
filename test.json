@@ -1,0 +1,207 @@
+{"_type": "tag", "name": "BaseModel", "path": "backend/models/base.py", "pattern": "/^class BaseModel:$/", "kind": "class"}
+{"_type": "tag", "name": "BaseSchema", "path": "backend/serializers/base.py", "pattern": "/^class BaseSchema:$/", "kind": "class"}
+{"_type": "tag", "name": "Comment", "path": "backend/models/comments.py", "pattern": "/^class Comment(db.Model, BaseModel):$/", "kind": "class"}
+{"_type": "tag", "name": "CommentSchema", "path": "backend/serializers/comments.py", "pattern": "/^class CommentSchema(ma.SQLAlchemyAutoSchema, BaseSchema):$/", "kind": "class"}
+{"_type": "tag", "name": "Genre", "path": "backend/models/genre.py", "pattern": "/^class Genre(db.Model):$/", "kind": "class"}
+{"_type": "tag", "name": "GenreSchema", "path": "backend/serializers/genre.py", "pattern": "/^class GenreSchema(ma.SQLAlchemyAutoSchema, BaseSchema):$/", "kind": "class"}
+{"_type": "tag", "name": "Meta", "path": "backend/serializers/comments.py", "pattern": "/^  class Meta:$/", "kind": "class", "scope": "CommentSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "Meta", "path": "backend/serializers/comments.py", "pattern": "/^  class Meta:$/", "kind": "class", "scope": "NestedCommentSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "Meta", "path": "backend/serializers/genre.py", "pattern": "/^  class Meta:$/", "kind": "class", "scope": "GenreSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "Meta", "path": "backend/serializers/genre.py", "pattern": "/^  class Meta:$/", "kind": "class", "scope": "PopulateGenreSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "Meta", "path": "backend/serializers/user.py", "pattern": "/^  class Meta:$/", "kind": "class", "scope": "PopulateUserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "Meta", "path": "backend/serializers/user.py", "pattern": "/^  class Meta:$/", "kind": "class", "scope": "UserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "Meta", "path": "backend/serializers/video.py", "pattern": "/^  class Meta:$/", "kind": "class", "scope": "PopulateVideoSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "Meta", "path": "backend/serializers/video.py", "pattern": "/^  class Meta:$/", "kind": "class", "scope": "VideoSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "NestedComment", "path": "backend/models/comments.py", "pattern": "/^class NestedComment(db.Model, BaseModel):$/", "kind": "class"}
+{"_type": "tag", "name": "NestedCommentSchema", "path": "backend/serializers/comments.py", "pattern": "/^class NestedCommentSchema(ma.SQLAlchemyAutoSchema, BaseSchema):$/", "kind": "class"}
+{"_type": "tag", "name": "PopulateGenreSchema", "path": "backend/serializers/genre.py", "pattern": "/^class PopulateGenreSchema(GenreSchema):$/", "kind": "class"}
+{"_type": "tag", "name": "PopulateUserSchema", "path": "backend/serializers/user.py", "pattern": "/^class PopulateUserSchema(ma.SQLAlchemyAutoSchema, BaseSchema):$/", "kind": "class"}
+{"_type": "tag", "name": "PopulateVideoSchema", "path": "backend/serializers/video.py", "pattern": "/^class PopulateVideoSchema(VideoSchema):$/", "kind": "class"}
+{"_type": "tag", "name": "User", "path": "backend/models/user.py", "pattern": "/^class User(db.Model, BaseModel):$/", "kind": "class"}
+{"_type": "tag", "name": "UserSchema", "path": "backend/serializers/user.py", "pattern": "/^class UserSchema(ma.SQLAlchemyAutoSchema, BaseSchema):$/", "kind": "class"}
+{"_type": "tag", "name": "Video", "path": "backend/models/video.py", "pattern": "/^class Video(db.Model, BaseModel):$/", "kind": "class"}
+{"_type": "tag", "name": "VideoSchema", "path": "backend/serializers/video.py", "pattern": "/^class VideoSchema(ma.SQLAlchemyAutoSchema, BaseSchema):$/", "kind": "class"}
+{"_type": "tag", "name": "__tablename__", "path": "backend/models/comments.py", "pattern": "/^  __tablename__= 'comments'$/", "file": true, "kind": "variable", "scope": "Comment", "scopeKind": "class"}
+{"_type": "tag", "name": "__tablename__", "path": "backend/models/comments.py", "pattern": "/^  __tablename__= 'nested_comments'$/", "file": true, "kind": "variable", "scope": "NestedComment", "scopeKind": "class"}
+{"_type": "tag", "name": "__tablename__", "path": "backend/models/genre.py", "pattern": "/^  __tablename__= 'genres'$/", "file": true, "kind": "variable", "scope": "Genre", "scopeKind": "class"}
+{"_type": "tag", "name": "__tablename__", "path": "backend/models/user.py", "pattern": "/^  __tablename__ = 'users'$/", "file": true, "kind": "variable", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "__tablename__", "path": "backend/models/video.py", "pattern": "/^  __tablename__ = 'videos'$/", "file": true, "kind": "variable", "scope": "Video", "scopeKind": "class"}
+{"_type": "tag", "name": "admin", "path": "backend/seed.py", "pattern": "/^  admin = User($/", "kind": "variable"}
+{"_type": "tag", "name": "animation", "path": "backend/seed.py", "pattern": "/^  animation = Genre( name='Animation')$/", "kind": "variable"}
+{"_type": "tag", "name": "app", "path": "backend/app.py", "pattern": "/^app = Flask(__name__, static_folder='dist')$/", "kind": "variable"}
+{"_type": "tag", "name": "art_illustration", "path": "backend/seed.py", "pattern": "/^  art_illustration = Genre( name='Art & Illustration')$/", "kind": "variable"}
+{"_type": "tag", "name": "bcrypt", "path": "backend/app.py", "pattern": "/^bcrypt = Bcrypt(app)$/", "kind": "variable"}
+{"_type": "tag", "name": "bob", "path": "backend/seed.py", "pattern": "/^  bob = User ($/", "kind": "variable"}
+{"_type": "tag", "name": "brad", "path": "backend/seed.py", "pattern": "/^  brad = User ($/", "kind": "variable"}
+{"_type": "tag", "name": "brad_vid_1", "path": "backend/seed.py", "pattern": "/^  brad_vid_1 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "catch_all", "path": "backend/app.py", "pattern": "/^def catch_all(path):$/", "kind": "function"}
+{"_type": "tag", "name": "check_passwords_match", "path": "backend/serializers/user.py", "pattern": "/^  def check_passwords_match(self, data, **kwargs):$/", "kind": "member", "scope": "PopulateUserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "comment", "path": "backend/models/comments.py", "pattern": "/^  comment = db.relationship('Comment', backref='nested_comments')$/", "kind": "variable", "scope": "NestedComment", "scopeKind": "class"}
+{"_type": "tag", "name": "comment1_vid1", "path": "backend/seed.py", "pattern": "/^  comment1_vid1 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid10", "path": "backend/seed.py", "pattern": "/^  comment1_vid10 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid2", "path": "backend/seed.py", "pattern": "/^  comment1_vid2 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid3", "path": "backend/seed.py", "pattern": "/^  comment1_vid3 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid4", "path": "backend/seed.py", "pattern": "/^  comment1_vid4 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid5", "path": "backend/seed.py", "pattern": "/^  comment1_vid5 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid6", "path": "backend/seed.py", "pattern": "/^  comment1_vid6 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid7", "path": "backend/seed.py", "pattern": "/^  comment1_vid7 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid8", "path": "backend/seed.py", "pattern": "/^  comment1_vid8 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment1_vid9", "path": "backend/seed.py", "pattern": "/^  comment1_vid9 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment2_vid1", "path": "backend/seed.py", "pattern": "/^  comment2_vid1 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment2_vid10", "path": "backend/seed.py", "pattern": "/^  comment2_vid10 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment2_vid4", "path": "backend/seed.py", "pattern": "/^  comment2_vid4 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment2_vid5", "path": "backend/seed.py", "pattern": "/^  comment2_vid5 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment2_vid7", "path": "backend/seed.py", "pattern": "/^  comment2_vid7 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment3_vid4", "path": "backend/seed.py", "pattern": "/^  comment3_vid4 = Comment($/", "kind": "variable"}
+{"_type": "tag", "name": "comment_create", "path": "backend/controllers/vid_post.py", "pattern": "/^def comment_create(video_id):$/", "kind": "function"}
+{"_type": "tag", "name": "comment_id", "path": "backend/models/comments.py", "pattern": "/^  comment_id = db.Column(db.Integer, db.ForeignKey('comments.id'))$/", "kind": "variable", "scope": "NestedComment", "scopeKind": "class"}
+{"_type": "tag", "name": "comment_id", "path": "backend/serializers/comments.py", "pattern": "/^  comment_id = fields.Integer()/", "kind": "variable", "scope": "NestedCommentSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "comment_schema", "path": "backend/controllers/vid_post.py", "pattern": "/^comment_schema = CommentSchema()$/", "kind": "variable"}
+{"_type": "tag", "name": "comments", "path": "backend/serializers/video.py", "pattern": "/^  comments = fields.Nested('CommentSchema', many=True)$/", "kind": "variable", "scope": "PopulateVideoSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "content", "path": "backend/models/comments.py", "pattern": "/^  content = db.Column(db.Text, nullable=False)$/", "kind": "variable", "scope": "Comment", "scopeKind": "class"}
+{"_type": "tag", "name": "cooking", "path": "backend/seed.py", "pattern": "/^  cooking = Genre( name='Cooking')$/", "kind": "variable"}
+{"_type": "tag", "name": "create", "path": "backend/controllers/vid_post.py", "pattern": "/^def create():$/", "kind": "function"}
+{"_type": "tag", "name": "create_nested", "path": "backend/controllers/vid_post.py", "pattern": "/^def create_nested(comment_id):$/", "kind": "function"}
+{"_type": "tag", "name": "created_at", "path": "backend/models/base.py", "pattern": "/^  created_at = db.Column(db.DateTime, default=datetime.utcnow)$/", "kind": "variable", "scope": "BaseModel", "scopeKind": "class"}
+{"_type": "tag", "name": "created_at", "path": "backend/serializers/base.py", "pattern": "/^  created_at = fields.DateTime(format='%Y-%m-%d %H:%M:%S')$/", "kind": "variable", "scope": "BaseSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "db", "path": "backend/app.py", "pattern": "/^db = SQLAlchemy(app)$/", "kind": "variable"}
+{"_type": "tag", "name": "db_URI", "path": "backend/environment/config.py", "pattern": "/^db_URI = os.getenv('DATABASE_URL', 'postgres:\\/\\/localhost:5432\\/howto_db')$/", "kind": "variable"}
+{"_type": "tag", "name": "dec", "path": "backend/seed.py", "pattern": "/^  dec = User($/", "kind": "variable"}
+{"_type": "tag", "name": "dec_vid_1", "path": "backend/seed.py", "pattern": "/^  dec_vid_1 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "dec_vid_2", "path": "backend/seed.py", "pattern": "/^  dec_vid_2 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "dec_vid_3", "path": "backend/seed.py", "pattern": "/^  dec_vid_3 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "description", "path": "backend/models/video.py", "pattern": "/^  description = db.Column(db.String(200), nullable=True)$/", "kind": "variable", "scope": "Video", "scopeKind": "class"}
+{"_type": "tag", "name": "email", "path": "backend/models/user.py", "pattern": "/^  email = db.Column(db.String(128), nullable=False, unique=True)$/", "kind": "variable", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "exclude", "path": "backend/serializers/user.py", "pattern": "/^    exclude = ('password_hash',)$/", "kind": "variable", "scope": "PopulateUserSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "exclude", "path": "backend/serializers/user.py", "pattern": "/^    exclude = ('password_hash',)$/", "kind": "variable", "scope": "UserSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "film_and_video", "path": "backend/seed.py", "pattern": "/^  film_and_video = Genre( name='Film & Video')$/", "kind": "variable"}
+{"_type": "tag", "name": "following", "path": "backend/models/user.py", "pattern": "/^  following = db.relationship('User', secondary=user_followers_join, $/", "kind": "variable", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "following", "path": "backend/serializers/user.py", "pattern": "/^  following = fields.Nested('UserSchema', many=True, exclude=('updated_at', 'created_at', 'genre/", "kind": "variable", "scope": "PopulateUserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "generate_token", "path": "backend/models/user.py", "pattern": "/^  def generate_token(self):$/", "kind": "member", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "genre_schema", "path": "backend/controllers/vid_post.py", "pattern": "/^genre_schema = GenreSchema()$/", "kind": "variable"}
+{"_type": "tag", "name": "genres", "path": "backend/models/user.py", "pattern": "/^  genres = db.relationship('Genre', secondary=user_genre_join, backref='users')$/", "kind": "variable", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "genres", "path": "backend/models/video.py", "pattern": "/^  genres = db.relationship('Genre', secondary=video_genres_join, backref='videos')$/", "kind": "variable", "scope": "Video", "scopeKind": "class"}
+{"_type": "tag", "name": "genres", "path": "backend/serializers/user.py", "pattern": "/^  genres = fields.Nested('GenreSchema', many=True)$/", "kind": "variable", "scope": "PopulateUserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "genres", "path": "backend/serializers/user.py", "pattern": "/^  genres = fields.Nested('GenreSchema', many=True)$/", "kind": "variable", "scope": "UserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "genres", "path": "backend/serializers/video.py", "pattern": "/^  genres = fields.Nested('GenreSchema', many=True)$/", "kind": "variable", "scope": "VideoSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "genres_index", "path": "backend/controllers/vid_post.py", "pattern": "/^def genres_index():$/", "kind": "function"}
+{"_type": "tag", "name": "get_single_comment", "path": "backend/controllers/vid_post.py", "pattern": "/^def get_single_comment(id):$/", "kind": "function"}
+{"_type": "tag", "name": "get_single_video", "path": "backend/controllers/vid_post.py", "pattern": "/^def get_single_video(id):$/", "kind": "function"}
+{"_type": "tag", "name": "graphic_design", "path": "backend/seed.py", "pattern": "/^  graphic_design = Genre( name='Graphic Design')$/", "kind": "variable"}
+{"_type": "tag", "name": "id", "path": "backend/models/base.py", "pattern": "/^  id = db.Column(db.Integer, primary_key=True)$/", "kind": "variable", "scope": "BaseModel", "scopeKind": "class"}
+{"_type": "tag", "name": "id", "path": "backend/models/genre.py", "pattern": "/^  id = db.Column(db.Integer, primary_key=True)$/", "kind": "variable", "scope": "Genre", "scopeKind": "class"}
+{"_type": "tag", "name": "index", "path": "backend/controllers/vid_post.py", "pattern": "/^def index():$/", "kind": "function"}
+{"_type": "tag", "name": "jenna", "path": "backend/seed.py", "pattern": "/^  jenna = User ($/", "kind": "variable"}
+{"_type": "tag", "name": "jenna_vid_1", "path": "backend/seed.py", "pattern": "/^  jenna_vid_1 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "jenna_vid_2", "path": "backend/seed.py", "pattern": "/^  jenna_vid_2 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "laurence", "path": "backend/seed.py", "pattern": "/^  laurence = User($/", "kind": "variable"}
+{"_type": "tag", "name": "laurence_vid_1", "path": "backend/seed.py", "pattern": "/^  laurence_vid_1 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "laurence_vid_2", "path": "backend/seed.py", "pattern": "/^  laurence_vid_2 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "lifestyle", "path": "backend/seed.py", "pattern": "/^  lifestyle = Genre( name='Lifestyle')$/", "kind": "variable"}
+{"_type": "tag", "name": "load_instance", "path": "backend/serializers/comments.py", "pattern": "/^    load_instance = True$/", "kind": "variable", "scope": "CommentSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_instance", "path": "backend/serializers/comments.py", "pattern": "/^    load_instance = True$/", "kind": "variable", "scope": "NestedCommentSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_instance", "path": "backend/serializers/genre.py", "pattern": "/^    load_instance = True$/", "kind": "variable", "scope": "GenreSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_instance", "path": "backend/serializers/genre.py", "pattern": "/^    load_instance = True$/", "kind": "variable", "scope": "PopulateGenreSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_instance", "path": "backend/serializers/user.py", "pattern": "/^    load_instance = True$/", "kind": "variable", "scope": "PopulateUserSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_instance", "path": "backend/serializers/user.py", "pattern": "/^    load_instance = True$/", "kind": "variable", "scope": "UserSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_instance", "path": "backend/serializers/video.py", "pattern": "/^    load_instance = True$/", "kind": "variable", "scope": "PopulateVideoSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_instance", "path": "backend/serializers/video.py", "pattern": "/^    load_instance = True$/", "kind": "variable", "scope": "VideoSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_only", "path": "backend/serializers/comments.py", "pattern": "/^    load_only = ('user_id',)$/", "kind": "variable", "scope": "CommentSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_only", "path": "backend/serializers/comments.py", "pattern": "/^    load_only = ('user_id',)$/", "kind": "variable", "scope": "NestedCommentSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_only", "path": "backend/serializers/user.py", "pattern": "/^    load_only = ('email', 'password')$/", "kind": "variable", "scope": "PopulateUserSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_only", "path": "backend/serializers/user.py", "pattern": "/^    load_only = ('email', 'password', 'genres',)$/", "kind": "variable", "scope": "UserSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_only", "path": "backend/serializers/video.py", "pattern": "/^    load_only = ('user_id',)$/", "kind": "variable", "scope": "PopulateVideoSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "load_only", "path": "backend/serializers/video.py", "pattern": "/^    load_only = ('user_id',)$/", "kind": "variable", "scope": "VideoSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "login", "path": "backend/controllers/user.py", "pattern": "/^def login():$/", "kind": "function"}
+{"_type": "tag", "name": "ma", "path": "backend/app.py", "pattern": "/^ma = Marshmallow(app)$/", "kind": "variable"}
+{"_type": "tag", "name": "mark", "path": "backend/seed.py", "pattern": "/^  mark = User ($/", "kind": "variable"}
+{"_type": "tag", "name": "mark_vid_1", "path": "backend/seed.py", "pattern": "/^  mark_vid_1 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "mark_vid_2", "path": "backend/seed.py", "pattern": "/^  mark_vid_2 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "mark_vid_3", "path": "backend/seed.py", "pattern": "/^  mark_vid_3 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "mark_vid_4", "path": "backend/seed.py", "pattern": "/^  mark_vid_4 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "model", "path": "backend/serializers/comments.py", "pattern": "/^    model = Comment$/", "kind": "variable", "scope": "CommentSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "model", "path": "backend/serializers/comments.py", "pattern": "/^    model = NestedComment$/", "kind": "variable", "scope": "NestedCommentSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "model", "path": "backend/serializers/genre.py", "pattern": "/^    model = Genre$/", "kind": "variable", "scope": "GenreSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "model", "path": "backend/serializers/genre.py", "pattern": "/^    model= Genre$/", "kind": "variable", "scope": "PopulateGenreSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "model", "path": "backend/serializers/user.py", "pattern": "/^    model = User$/", "kind": "variable", "scope": "PopulateUserSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "model", "path": "backend/serializers/user.py", "pattern": "/^    model = User$/", "kind": "variable", "scope": "UserSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "model", "path": "backend/serializers/video.py", "pattern": "/^    model = Video$/", "kind": "variable", "scope": "PopulateVideoSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "model", "path": "backend/serializers/video.py", "pattern": "/^    model = Video$/", "kind": "variable", "scope": "VideoSchema.Meta", "scopeKind": "class"}
+{"_type": "tag", "name": "music", "path": "backend/seed.py", "pattern": "/^  music = Genre( name='Music')$/", "kind": "variable"}
+{"_type": "tag", "name": "name", "path": "backend/models/genre.py", "pattern": "/^  name = db.Column(db.String(40), unique=True)$/", "kind": "variable", "scope": "Genre", "scopeKind": "class"}
+{"_type": "tag", "name": "nested_comment_1", "path": "backend/seed.py", "pattern": "/^  nested_comment_1 = NestedComment($/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comment_2", "path": "backend/seed.py", "pattern": "/^  nested_comment_2 = NestedComment($/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comment_3", "path": "backend/seed.py", "pattern": "/^  nested_comment_3 = NestedComment($/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comment_4", "path": "backend/seed.py", "pattern": "/^  nested_comment_4 = NestedComment($/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comment_5", "path": "backend/seed.py", "pattern": "/^  nested_comment_5 = NestedComment($/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comment_6", "path": "backend/seed.py", "pattern": "/^  nested_comment_6 = NestedComment($/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comment_7", "path": "backend/seed.py", "pattern": "/^  nested_comment_7 = NestedComment($/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comment_8", "path": "backend/seed.py", "pattern": "/^  nested_comment_8 = NestedComment($/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comment_schema", "path": "backend/controllers/vid_post.py", "pattern": "/^nested_comment_schema = NestedCommentSchema()$/", "kind": "variable"}
+{"_type": "tag", "name": "nested_comments", "path": "backend/serializers/comments.py", "pattern": "/^  nested_comments = fields.Nested('NestedCommentSchema', many=True)$/", "kind": "variable", "scope": "CommentSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "nested_content", "path": "backend/models/comments.py", "pattern": "/^  nested_content = db.Column(db.Text, nullable=False)$/", "kind": "variable", "scope": "NestedComment", "scopeKind": "class"}
+{"_type": "tag", "name": "password", "path": "backend/models/user.py", "pattern": "/^  def password(self):$/", "kind": "member", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "password", "path": "backend/models/user.py", "pattern": "/^  def password(self, password_plaintext):$/", "kind": "member", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "password", "path": "backend/serializers/user.py", "pattern": "/^  password = fields.String(required=True)$/", "kind": "variable", "scope": "PopulateUserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "password", "path": "backend/serializers/user.py", "pattern": "/^  password = fields.String(required=True)$/", "kind": "variable", "scope": "UserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "password_confirmation", "path": "backend/serializers/user.py", "pattern": "/^  password_confirmation = fields.String(required=False)$/", "kind": "variable", "scope": "PopulateUserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "password_hash", "path": "backend/models/user.py", "pattern": "/^  password_hash = db.Column(db.String(128), nullable=False)$/", "kind": "variable", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "photography", "path": "backend/seed.py", "pattern": "/^  photography = Genre( name='Photography')$/", "kind": "variable"}
+{"_type": "tag", "name": "populate_genre", "path": "backend/controllers/vid_post.py", "pattern": "/^populate_genre = PopulateGenreSchema()$/", "kind": "variable"}
+{"_type": "tag", "name": "populate_user", "path": "backend/controllers/user.py", "pattern": "/^populate_user = PopulateUserSchema()$/", "kind": "variable"}
+{"_type": "tag", "name": "populate_video", "path": "backend/controllers/vid_post.py", "pattern": "/^populate_video = PopulateVideoSchema()$/", "kind": "variable"}
+{"_type": "tag", "name": "productivity", "path": "backend/seed.py", "pattern": "/^  productivity = Genre( name='Productivity')$/", "kind": "variable"}
+{"_type": "tag", "name": "remove", "path": "backend/controllers/vid_post.py", "pattern": "/^def remove(id):$/", "kind": "function"}
+{"_type": "tag", "name": "remove", "path": "backend/models/base.py", "pattern": "/^  def remove(self):$/", "kind": "member", "scope": "BaseModel", "scopeKind": "class"}
+{"_type": "tag", "name": "removeComment", "path": "backend/controllers/vid_post.py", "pattern": "/^def removeComment(id):$/", "kind": "function"}
+{"_type": "tag", "name": "removeNestedComment", "path": "backend/controllers/vid_post.py", "pattern": "/^def removeNestedComment(comment_id, nested_id):$/", "kind": "function"}
+{"_type": "tag", "name": "router", "path": "backend/controllers/user.py", "pattern": "/^router = Blueprint(__name__, 'users')$/", "kind": "variable"}
+{"_type": "tag", "name": "router", "path": "backend/controllers/vid_post.py", "pattern": "/^router = Blueprint(__name__, 'videos')$/", "kind": "variable"}
+{"_type": "tag", "name": "save", "path": "backend/models/base.py", "pattern": "/^  def save(self):$/", "kind": "member", "scope": "BaseModel", "scopeKind": "class"}
+{"_type": "tag", "name": "secret", "path": "backend/environment/config.py", "pattern": "/^secret = os.getenv('SECRET', 'Oh my god they were roommates.')$/", "kind": "variable"}
+{"_type": "tag", "name": "secure_route", "path": "backend/middleware/secure_route.py", "pattern": "/^def secure_route(func):$/", "kind": "function"}
+{"_type": "tag", "name": "sherryll", "path": "backend/seed.py", "pattern": "/^  sherryll = User ($/", "kind": "variable"}
+{"_type": "tag", "name": "sherryll_vid_1", "path": "backend/seed.py", "pattern": "/^  sherryll_vid_1 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "sherryll_vid_2", "path": "backend/seed.py", "pattern": "/^  sherryll_vid_2 = Video($/", "kind": "variable"}
+{"_type": "tag", "name": "signup", "path": "backend/controllers/user.py", "pattern": "/^def signup():$/", "kind": "function"}
+{"_type": "tag", "name": "title", "path": "backend/models/video.py", "pattern": "/^  title = db.Column(db.String(50), nullable=False, unique=True)$/", "kind": "variable", "scope": "Video", "scopeKind": "class"}
+{"_type": "tag", "name": "ui_ux_design", "path": "backend/seed.py", "pattern": "/^  ui_ux_design = Genre( name='UI\\/UX Design')$/", "kind": "variable"}
+{"_type": "tag", "name": "update_comment", "path": "backend/controllers/vid_post.py", "pattern": "/^def update_comment(id):$/", "kind": "function"}
+{"_type": "tag", "name": "update_user_follow", "path": "backend/controllers/user.py", "pattern": "/^def update_user_follow():$/", "kind": "function"}
+{"_type": "tag", "name": "update_user_genre", "path": "backend/controllers/user.py", "pattern": "/^def update_user_genre():$/", "kind": "function"}
+{"_type": "tag", "name": "update_video", "path": "backend/controllers/vid_post.py", "pattern": "/^def update_video(id):$/", "kind": "function"}
+{"_type": "tag", "name": "updated_at", "path": "backend/models/base.py", "pattern": "/^  updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)$/", "kind": "variable", "scope": "BaseModel", "scopeKind": "class"}
+{"_type": "tag", "name": "updated_at", "path": "backend/serializers/base.py", "pattern": "/^  updated_at = fields.DateTime(format='%Y-%m-%d %H:%M:%S')/", "kind": "variable", "scope": "BaseSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "user", "path": "backend/models/comments.py", "pattern": "/^  user = db.relationship('User', backref='comments')$/", "kind": "variable", "scope": "Comment", "scopeKind": "class"}
+{"_type": "tag", "name": "user", "path": "backend/models/comments.py", "pattern": "/^  user = db.relationship('User', backref='nested_comments')/", "kind": "variable", "scope": "NestedComment", "scopeKind": "class"}
+{"_type": "tag", "name": "user", "path": "backend/models/video.py", "pattern": "/^  user = db.relationship('User', backref='videos')$/", "kind": "variable", "scope": "Video", "scopeKind": "class"}
+{"_type": "tag", "name": "user", "path": "backend/serializers/comments.py", "pattern": "/^  user = fields.Nested('UserSchema', only=('id', 'username'))$/", "kind": "variable", "scope": "CommentSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "user", "path": "backend/serializers/comments.py", "pattern": "/^  user = fields.Nested('UserSchema', only=('id', 'username'))$/", "kind": "variable", "scope": "NestedCommentSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "user", "path": "backend/serializers/video.py", "pattern": "/^  user = fields.Nested('UserSchema', only=('id', 'username'))$/", "kind": "variable", "scope": "VideoSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "user_followers_join", "path": "backend/models/user_followers.py", "pattern": "/^user_followers_join = db.Table('user_followers',$/", "kind": "variable"}
+{"_type": "tag", "name": "user_genre_join", "path": "backend/models/user_genre.py", "pattern": "/^user_genre_join = db.Table('user_genre',$/", "kind": "variable"}
+{"_type": "tag", "name": "user_id", "path": "backend/models/comments.py", "pattern": "/^  user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)$/", "kind": "variable", "scope": "Comment", "scopeKind": "class"}
+{"_type": "tag", "name": "user_id", "path": "backend/models/comments.py", "pattern": "/^  user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)$/", "kind": "variable", "scope": "NestedComment", "scopeKind": "class"}
+{"_type": "tag", "name": "user_id", "path": "backend/models/video.py", "pattern": "/^  user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)$/", "kind": "variable", "scope": "Video", "scopeKind": "class"}
+{"_type": "tag", "name": "user_id", "path": "backend/serializers/comments.py", "pattern": "/^  user_id = fields.Integer()$/", "kind": "variable", "scope": "CommentSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "user_id", "path": "backend/serializers/comments.py", "pattern": "/^  user_id = fields.Integer()$/", "kind": "variable", "scope": "NestedCommentSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "user_id", "path": "backend/serializers/video.py", "pattern": "/^  user_id = fields.Integer()$/", "kind": "variable", "scope": "VideoSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "user_index", "path": "backend/controllers/user.py", "pattern": "/^def user_index():$/", "kind": "function"}
+{"_type": "tag", "name": "user_schema", "path": "backend/controllers/user.py", "pattern": "/^user_schema = UserSchema()$/", "kind": "variable"}
+{"_type": "tag", "name": "user_single", "path": "backend/controllers/user.py", "pattern": "/^def user_single(id):$/", "kind": "function"}
+{"_type": "tag", "name": "username", "path": "backend/models/user.py", "pattern": "/^  username = db.Column(db.String(20), nullable=False, unique=True)$/", "kind": "variable", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "username", "path": "backend/serializers/user.py", "pattern": "/^  username = fields.String(required=True)$/", "kind": "variable", "scope": "UserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "validate_email", "path": "backend/models/user.py", "pattern": "/^  def validate_email(self, key, email):$/", "kind": "member", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "validate_password", "path": "backend/models/user.py", "pattern": "/^  def validate_password(self, password_plaintext):$/", "kind": "member", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "validate_username", "path": "backend/models/user.py", "pattern": "/^  def validate_username(self, key, username):$/", "kind": "member", "scope": "User", "scopeKind": "class"}
+{"_type": "tag", "name": "vid_url", "path": "backend/models/video.py", "pattern": "/^  vid_url = db.Column(db.String(200), nullable=False, unique=True)$/", "kind": "variable", "scope": "Video", "scopeKind": "class"}
+{"_type": "tag", "name": "video", "path": "backend/models/comments.py", "pattern": "/^  video = db.relationship('Video', backref='comments')$/", "kind": "variable", "scope": "Comment", "scopeKind": "class"}
+{"_type": "tag", "name": "video_genres_join", "path": "backend/models/video_genres.py", "pattern": "/^video_genres_join = db.Table('video_genres',$/", "kind": "variable"}
+{"_type": "tag", "name": "video_id", "path": "backend/models/comments.py", "pattern": "/^  video_id = db.Column(db.Integer, db.ForeignKey('videos.id'))$/", "kind": "variable", "scope": "Comment", "scopeKind": "class"}
+{"_type": "tag", "name": "video_schema", "path": "backend/controllers/vid_post.py", "pattern": "/^video_schema = VideoSchema()$/", "kind": "variable"}
+{"_type": "tag", "name": "videos", "path": "backend/serializers/genre.py", "pattern": "/^  videos = fields.Nested('VideoSchema', many=True, exclude=('genres',))/", "kind": "variable", "scope": "PopulateGenreSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "videos", "path": "backend/serializers/user.py", "pattern": "/^  videos = fields.Nested('VideoSchema', many=True, exclude=('user',))$/", "kind": "variable", "scope": "PopulateUserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "videos", "path": "backend/serializers/user.py", "pattern": "/^  videos = fields.Nested('VideoSchema', many=True, exclude=('user',))$/", "kind": "variable", "scope": "UserSchema", "scopeKind": "class"}
+{"_type": "tag", "name": "web_development", "path": "backend/seed.py", "pattern": "/^  web_development = Genre( name='Web Development')$/", "kind": "variable"}
+{"_type": "tag", "name": "wrapper", "path": "backend/middleware/secure_route.py", "pattern": "/^  def wrapper(*args, **kwargs):$/", "file": true, "kind": "function", "scope": "secure_route", "scopeKind": "function"}
+{"_type": "tag", "name": "writing", "path": "backend/seed.py", "pattern": "/^  writing = Genre( name='Writing')$/", "kind": "variable"}

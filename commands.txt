@@ -1,0 +1,5 @@
+universal-ctags --output-format=json -R backend > test.json
+
+universal-ctags --list-fields 
+
+universal-ctags --output-format=json --fields="*" -R backend > test.json
