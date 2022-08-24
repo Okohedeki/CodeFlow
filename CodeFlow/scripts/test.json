@@ -1,0 +1,5 @@
+{"_type": "tag", "path": "../../SampleProject/backend/app.py", "pattern": "/^app = Flask(__name__, static_folder='dist')$/", "language": "Python", "line": 7, "kind": "variable", "access": "public", "roles": "def"}
+{"_type": "tag", "path": "../../SampleProject/backend/app.py", "pattern": "/^bcrypt = Bcrypt(app)$/", "language": "Python", "line": 14, "kind": "variable", "access": "public", "roles": "def"}
+{"_type": "tag", "path": "../../SampleProject/backend/app.py", "pattern": "/^db = SQLAlchemy(app)$/", "language": "Python", "line": 12, "kind": "variable", "access": "public", "roles": "def"}
+{"_type": "tag", "path": "../../SampleProject/backend/app.py", "pattern": "/^def catch_all(path):$/", "language": "Python", "line": 30, "kind": "function", "access": "public", "signature": "(path)", "roles": "def", "end": 37}
+{"_type": "tag", "path": "../../SampleProject/backend/app.py", "pattern": "/^ma = Marshmallow(app)$/", "language": "Python", "line": 13, "kind": "variable", "access": "public", "roles": "def"}
