@@ -305,6 +305,8 @@ def process_tokens(tokens):
     indents = [Whitespace("")]
     check_equal = 0
     data = {}
+
+    iterator = 0
     
 
     for index, (type, token, start, end, line) in enumerate(tokens):
@@ -316,9 +318,8 @@ def process_tokens(tokens):
             # be undone when we see the INDENT.
             check_equal = 1
 
-            if start[0] != '':
-                data[index] = {'type':type, 'token':token, 'start':start, 'end':end, 'line':line, 'previous_indent_level':0, 'current_indent_level':0, 'string_indent_level':'newLine', 'lineNo':start[0]}
-
+            data[iterator] = {'type':type, 'token':token, 'start':start, 'end':end, 'line':line, 'previous_indent_level':0, 'current_indent_level':0, 'string_indent_level':'newLine', 'lineNo':start[0]}
+            iterator += 1
                 # data[index]['current_indent_level'] = 0
                 # data[index]['previous_indent_level'] = 0
                 # data[index]['string_indent_level'] = 'newline'
@@ -337,8 +338,8 @@ def process_tokens(tokens):
             #     raise NannyNag(start[0], msg, line)
             indents.append(thisguy)
             
-            if start[0] != '':
-                data[index] = {'type':type, 'token':token, 'start':start, 'end':end, 'line':line, 'previous_indent_level':other_indent_level, 'current_indent_level':main_indent_level, 'string_indent_level':'indent', 'lineNo':start[0]}
+            data[iterator] = {'type':type, 'token':token, 'start':start, 'end':end, 'line':line, 'previous_indent_level':other_indent_level, 'current_indent_level':main_indent_level, 'string_indent_level':'indent', 'lineNo':start[0]}
+            iterator += 1
 
         elif type == DEDENT:
             # there's nothing we need to check here!  what's important is
@@ -353,11 +354,8 @@ def process_tokens(tokens):
 
             check_equal = 1
 
-            if start[0] != '':
-                data[index] = {'type':type, 'token':token, 'start':start, 'end':end, 'line':line, 'previous_indent_level':0, 'current_indent_level':0, 'string_indent_level':'dedent', 'lineNo':start[0]}
-
-
-
+            data[iterator] = {'type':type, 'token':token, 'start':start, 'end':end, 'line':line, 'previous_indent_level':0, 'current_indent_level':0, 'string_indent_level':'dedent', 'lineNo':start[0]}
+            iterator += 1
 
             del indents[-1]
 
@@ -378,10 +376,9 @@ def process_tokens(tokens):
             #     msg = "indent not equal e.g. " + format_witnesses(witness)
             #    raise NannyNag(start[0], msg, line)
 
-            if start[0] != '':
-                data[index] = {'type':type, 'token':token, 'start':start, 'end':end, 'line':line, 'previous_indent_level':other_indent_level, 'current_indent_level':main_indent_level, 'string_indent_level':'sameline', 'lineNo':start[0]}
-
-
+            #data[iterator] = {'type':type, 'token':token, 'start':start, 'end':end, 'line':line, 'previous_indent_level':other_indent_level, 'current_indent_level':main_indent_level, 'string_indent_level':'sameline', 'lineNo':start[0]}
+            #iterator += 1
+    data['MetaData'] = {'len':iterator-1, 'file':__file__}
     return data
 
 
