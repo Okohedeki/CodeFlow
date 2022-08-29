@@ -57,3 +57,27 @@ def catch_all2(path):
     return app.send_static_file('index.html') 
 
 print(True)
+
+class Test:
+    def __init__(self):
+        return self
+
+    def catch_all2(path):
+        dirname = os.path.dirname(__file__)
+        filename = os.path.join(dirname, 'dist/' + path)
+
+        if os.path.isfile(filename): # if path is a file, send it back
+            return app.send_static_file(path)
+
+        else:
+            if os.path.isfile(filename): # if path is a file, send it back
+                if app.send_static_file(path):
+                    if app.send_static_file(path):
+                        if app.send_static_file(path):
+                            return "tes"
+                else:
+                    print('ytadasd')
+                    return 'nashas'
+
+
+        return app.send_static_file('index.html') 

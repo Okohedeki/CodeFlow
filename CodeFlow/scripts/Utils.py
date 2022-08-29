@@ -1,90 +1,103 @@
 import inspect
 import json
+from tokenize import String
 from tracemalloc import start
 from TabNannyTest import check
 import subprocess
 import os
 import time
 
-
-indentation = []
-indentation.append(0)
-depth = 0
-data = [[]]
-code_groupings = []
-
-f = open('/home/okohedeki/Desktop/CodeFlow/SampleProject/backend/app.py', 'r')
+from itertools import islice
+from typing import Iterator
 
 
-for index, line in enumerate(f):
-    line = line[:-1]
+def changes(lst: list) -> Iterator[int]:
 
-    content = line.strip()
-    indent = len(line) - len(content)
-    if indent > indentation[-1] and content != '':
-        depth += 1
-        indentation.append(indent)
-        data.append([])
+    logic_groups = []
+    for index, (current, next) in enumerate(zip(lst, islice(lst, 1, None))):
+        if current != next and current == 0:
+            start_value = index + 1
 
-    elif indent < indentation[-1] and content != '':
-        while indent < indentation[-1]:
-            depth -= 1
-            indentation.pop()
-            top = data.pop()
-            data[-1].append(top)
+        elif current != next and next == 0 :
+            end_value = index + 1
+            logic_groups.append([start_value, end_value])
 
-    data[-1].append(index+1)
-    code_groupings.append((depth, index))
+            start_value, end_value = '', ''
 
-
-while len(data) > 1:
-    top = data.pop()
-    data[-1].append(top)
-
-current_depth = 0
-for i in range(0, len(code_groupings)):
-
-    if code_groupings[i][0] == 0:
-        continue
-        #print(code_groupings[i][0], code_groupings[i][1])
-
-    else:
-        start_line_num = code_groupings[i-1][1]
-        print(start_line_num)
-
-                
+        elif current == next and current != 0:
+            continue
         
-        
+        elif current == next and current == 0:
+            logic_groups.append([index])
 
+    return logic_groups
 
-#print(data[0])
-# for i in data[0]:
-#     if isinstance(i+1, list):
-
-# def groupLogic(indent_json, len_json):
-#     final_logic_grouping = {}
-#     current_count = 0
-#     del indent_json['MetaData']
-#     for i in range(0, len_json - 1):
-#         if indent_json[i]['string_indent_level'] == 'newLine' and current_count == 0:
-#             final_logic_grouping['line_start'] = indent_json[i]['lineNo']
-#             final_logic_grouping['line_end'] = indent_json[i]['lineNo']
-
-#         elif indent_json[i]['string_indent_level'] == 'indent':
-#             current_count += 1
-
-#         elif indent_json[i]['string_indent_level'] == 'dedent':
-#             current_count -= 1
-
-
-#     # for item in json_object:
-#     #     print(item)
-
-# if __name__ == '__main__':
-#     data = check('/home/okohedeki/Desktop/CodeFlow/SampleProject/backend/app.py')
-#     len_data = data['MetaData']['len']
-#     groupLogic(data, len_data)
-#     #universal-ctags --output-format=json --fields="*" -R backend/app.py > test.json
+def depthIndex(filename: String) -> list:
+    indentation = []
+    indentation.append(0)
+    depth = 0
+    data = [[]]
+    code_groupings = []
     
-#     #os.system("universal-ctags --output-format=json --fields=""a+e+E+f+m+i+F+K+Z+l+n+P+r+s+Z+p+S+t"" -R ../../SampleProject/backend/app.py > test.json")
-#     #print(Logical_indent_json[0])
+    f = open(filename, 'r')
+
+
+    for index, line in enumerate(f):
+        line = line[:-1]
+
+        content = line.strip()
+        indent = len(line) - len(content)
+        if indent > indentation[-1] and content != '':
+            depth += 1
+            indentation.append(indent)
+            data.append([])
+
+        elif indent < indentation[-1] and content != '':
+            while indent < indentation[-1]:
+                depth -= 1
+                indentation.pop()
+                top = data.pop()
+                data[-1].append(top)
+
+        data[-1].append(index+1)
+        code_groupings.append((depth, index))
+    
+    f.close()
+
+    #adding blank line at end of file to indent goes back to 0 if needed. 
+    max_index = code_groupings[-1][1]
+    code_groupings.append((0,max_index+1))    
+
+
+    while len(data) > 1:
+        top = data.pop()
+        data[-1].append(top)
+
+    only_depth = [i[0] for i in code_groupings]
+    return only_depth
+
+def createLogicGroups(filename: String, depth_list: list) -> list:
+        logic_group_list = []
+        f = open(filename)
+        new_f = f.readlines()
+        for index, i in enumerate(depth_list):
+            if len(i) == 1:
+                logic_group = new_f[i[0]]
+                logic_group_list.append([logic_group])
+            elif len(i) == 2:
+                logic_group = new_f[i[0]-1:i[1]]
+                logic_group_list.append(logic_group)
+        f.close()
+        return logic_group_list
+
+if __name__ == '__main__':
+
+    filename = '/home/okohedeki/Desktop/CodeFlow/SampleProject/backend/app.py'
+
+    only_depth = depthIndex(filename)
+
+    depth_index = changes(only_depth)
+    logic_groups = createLogicGroups(filename, depth_index)
+
+    for x in logic_groups:
+        print(x)
